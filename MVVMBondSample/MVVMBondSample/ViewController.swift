@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MVVMBondSample
 //
-//  Created by OVO on 16/07/19.
+//  Created by Reva Yoga Pradana on 16/07/19.
 //  Copyright © 2019 reva. All rights reserved.
 //
 
