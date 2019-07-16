@@ -6,5 +6,6 @@ target 'MVVMBondSample' do
   use_frameworks!
 
   # Pods for MVVMBondSample
-  pod 'Bond', '~> 7.5.0' 
+  pod 'Alamofire', '~> 4.8.1'
+  pod 'Bond', '~> 7.5.0'
 end
