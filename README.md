@@ -1,2 +1,2 @@
 # MVVMBondSample
-Sample project with MVVM + Bond
+Sample project iOS with MVVM + Bond
