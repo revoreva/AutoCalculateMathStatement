@@ -5,3 +5,7 @@ Sample project iOS with MVVM + Bond (https://github.com/DeclarativeHub/Bond)
 Demo:
 
 ![](demo.gif)
+
+Main structures:
+
+![](structures.png)
