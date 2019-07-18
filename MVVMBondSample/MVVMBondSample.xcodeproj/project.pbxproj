@@ -78,6 +78,7 @@
 				9464F36022DDA28B00D078E4 /* AppDelegate.swift */,
 				9464F36722DDA28E00D078E4 /* Assets.xcassets */,
 				9464F37322DDC1CD00D078E4 /* Calculator */,
+				94EF7BAC22E0808400FA8091 /* Endpoints.swift */,
 				9464F36C22DDA28E00D078E4 /* Info.plist */,
 				9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */,
 				94EF7BB622E0F93B00FA8091 /* Main.storyboard */,
@@ -143,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				94EF7BAA22E07FF400FA8091 /* CalculatorService.swift */,
-				94EF7BAC22E0808400FA8091 /* Endpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
