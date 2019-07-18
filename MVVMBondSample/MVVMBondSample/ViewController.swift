@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onTapButton(_ sender: Any) {
+        let wireframe = CalculatorWireframe()
+        
+        wireframe.showCalculatorScreen(from: self)
+    }
+    
 }
 
