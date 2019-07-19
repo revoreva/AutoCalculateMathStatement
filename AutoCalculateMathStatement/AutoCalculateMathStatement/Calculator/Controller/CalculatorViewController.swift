@@ -8,15 +8,16 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, CalculatorViewModelProtocol {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
-    var viewModel: CalculatorViewModel!
+    var viewModel: CalculatorViewModel = CalculatorViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
         viewModel.onViewDidLoad()
     }
 }

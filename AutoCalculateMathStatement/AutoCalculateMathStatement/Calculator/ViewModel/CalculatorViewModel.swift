@@ -9,20 +9,25 @@
 import UIKit
 import Bond
 
+protocol CalculatorViewModelProtocol: class {
+    var textField: UITextField! { get set }
+    var resultLabel: UILabel! { get set }
+}
+
 class CalculatorViewModel {
-    weak var viewController: CalculatorViewController?
-    
+    weak var delegate: CalculatorViewModelProtocol?
+
     func onViewDidLoad() {
         setupObserver()
     }
     
     private func setupObserver() {
-        _ = viewController?.textField.reactive.text.observeNext { [weak self] newText in
+        _ = delegate?.textField.reactive.text.observeNext { [weak self] newText in
             
             guard let newText = newText else { return }
             
             self?.requestResult(calculatorStatement: newText) { [weak self] result in
-                self?.viewController?.resultLabel.text = result
+                self?.delegate?.resultLabel.text = result
             }
         }
     }

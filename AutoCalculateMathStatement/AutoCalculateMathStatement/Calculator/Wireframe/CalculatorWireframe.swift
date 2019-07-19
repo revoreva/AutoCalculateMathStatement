@@ -19,11 +19,7 @@ class CalculatorWireframe {
 // MARK: - Private Implementation
 private extension CalculatorWireframe {
     func create() -> CalculatorViewController {
-        let viewModel = CalculatorViewModel()
-        let vc = CalculatorViewController(nibName: "CalculatorViewController", bundle: nil)
-        viewModel.viewController = vc
-        vc.viewModel = viewModel
-        
+        let vc = CalculatorViewController()
         return vc
     }
 }
