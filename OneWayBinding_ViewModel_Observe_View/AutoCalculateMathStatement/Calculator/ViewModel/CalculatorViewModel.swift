@@ -18,11 +18,7 @@ class CalculatorViewModel {
         self.viewController = viewController
     }
     
-    func onViewDidLoad() {
-        setupBinding()
-    }
-    
-    private func setupBinding() {
+    func setupBinding() {
         guard let viewController = viewController else { return }
         
         _ = viewController.textField.reactive.text.observeNext { [weak self] newText in
