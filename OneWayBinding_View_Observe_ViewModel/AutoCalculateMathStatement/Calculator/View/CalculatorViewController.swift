@@ -17,7 +17,7 @@ class CalculatorViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.viewModel = CalculatorViewModel(viewController: self)
+        self.viewModel = CalculatorViewModel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,6 +27,13 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.onViewDidLoad()
+        setupBinding()
+    }
+    
+    private func setupBinding() {
+        viewModel.setupBinding()
+        
+        textField.reactive.text.bind(to: viewModel.statement)
+        viewModel.result.bind(to: resultLabel)
     }
 }

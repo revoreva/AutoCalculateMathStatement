@@ -10,30 +10,18 @@ import UIKit
 import Bond
 
 class CalculatorViewModel {
+    var statement: Observable<String?> = Observable<String?>("")
     var result: Observable<String> = Observable<String>("")
     
-    weak var viewController: CalculatorViewController?
-    
-    init(viewController: CalculatorViewController?) {
-        self.viewController = viewController
-    }
-    
-    func onViewDidLoad() {
-        setupBinding()
-    }
-    
-    private func setupBinding() {
-        guard let viewController = viewController else { return }
-        
-        _ = viewController.textField.reactive.text.observeNext { [weak self] newText in
+    func setupBinding() {
+        _ = statement.observeNext { [weak self] newText in
+            
             guard let newText = newText else { return }
             
             self?.requestResult(calculatorStatement: newText) { [weak self] result in
                 self?.result.value = result
             }
         }
-        
-        result.bind(to: viewController.resultLabel)
     }
     
     private func requestResult(calculatorStatement: String, completion: ((String) -> Void)?) {
