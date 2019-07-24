@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculatorWireframe {
-    func showCalculatorScreen(from vc: UIViewController) {
+    func show(from vc: UIViewController) {
         let calculatorVC = create()
         
         vc.present(calculatorVC, animated: false, completion: nil)
