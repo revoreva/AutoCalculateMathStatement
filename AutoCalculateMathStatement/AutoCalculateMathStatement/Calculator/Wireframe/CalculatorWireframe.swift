@@ -12,7 +12,7 @@ class CalculatorWireframe {
     func show(from vc: UIViewController) {
         let calculatorVC = create()
         
-        vc.present(calculatorVC, animated: false, completion: nil)
+        vc.navigationController?.pushViewController(calculatorVC, animated: true)
     }
 }
 

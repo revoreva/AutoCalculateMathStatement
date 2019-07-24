@@ -75,10 +75,10 @@
 		9464F35F22DDA28B00D078E4 /* AutoCalculateMathStatement */ = {
 			isa = PBXGroup;
 			children = (
+				949EE51722E85DD70016EE9F /* BaseCode */,
 				9464F36022DDA28B00D078E4 /* AppDelegate.swift */,
 				9464F36722DDA28E00D078E4 /* Assets.xcassets */,
 				9464F37322DDC1CD00D078E4 /* Calculator */,
-				94EF7BAC22E0808400FA8091 /* Endpoints.swift */,
 				9464F36C22DDA28E00D078E4 /* Info.plist */,
 				9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */,
 				94EF7BB622E0F93B00FA8091 /* Main.storyboard */,
@@ -130,6 +130,14 @@
 				94EF7BB422E0F5A200FA8091 /* CalculatorWireframe.swift */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		949EE51722E85DD70016EE9F /* BaseCode */ = {
+			isa = PBXGroup;
+			children = (
+				94EF7BAC22E0808400FA8091 /* Endpoints.swift */,
+			);
+			path = BaseCode;
 			sourceTree = "<group>";
 		};
 		94EF7BA922E07F7100FA8091 /* Service */ = {
