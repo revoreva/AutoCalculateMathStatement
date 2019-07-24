@@ -7,5 +7,5 @@ target 'AutoCalculateMathStatement' do
 
   # Pods for AutoCalculateMathStatement
   pod 'Alamofire', '~> 4.8.1'
-  pod 'Bond', '~> 7.5.0'
+  pod 'Bond', '~> 7.6.0'
 end
