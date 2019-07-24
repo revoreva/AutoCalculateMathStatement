@@ -13,7 +13,11 @@ class CalculatorViewModel {
     var statement: Observable<String?> = Observable<String?>("")
     var result: Observable<String> = Observable<String>("")
     
-    func setupBinding() {
+    init() {
+        setupAction()
+    }
+    
+    private func setupAction() {
         _ = statement.observeNext { [weak self] newText in
             
             guard let newText = newText else { return }

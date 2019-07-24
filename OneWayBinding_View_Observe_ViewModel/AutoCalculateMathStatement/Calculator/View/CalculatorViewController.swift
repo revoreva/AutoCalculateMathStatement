@@ -31,8 +31,6 @@ class CalculatorViewController: UIViewController {
     }
     
     private func setupBinding() {
-        viewModel.setupBinding()
-        
         textField.reactive.text.bind(to: viewModel.statement)
         viewModel.result.bind(to: resultLabel)
     }
