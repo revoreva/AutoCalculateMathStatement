@@ -9,27 +9,31 @@
 import UIKit
 import Bond
 
-protocol CalculatorViewModelProtocol: class {
-    var textField: UITextField! { get set }
-    var resultLabel: UILabel! { get set }
-}
-
 class CalculatorViewModel {
-    weak var delegate: CalculatorViewModelProtocol?
-
-    func onViewDidLoad() {
-        setupObserver()
+    var result: Observable<String> = Observable<String>("")
+    
+    weak var viewController: CalculatorViewController?
+    
+    init(viewController: CalculatorViewController?) {
+        self.viewController = viewController
     }
     
-    private func setupObserver() {
-        _ = delegate?.textField.reactive.text.observeNext { [weak self] newText in
-            
+    func onViewDidLoad() {
+        setupBinding()
+    }
+    
+    private func setupBinding() {
+        guard let viewController = viewController else { return }
+        
+        _ = viewController.textField.reactive.text.observeNext { [weak self] newText in
             guard let newText = newText else { return }
             
             self?.requestResult(calculatorStatement: newText) { [weak self] result in
-                self?.delegate?.resultLabel.text = result
+                self?.result.value = result
             }
         }
+        
+        result.bind(to: viewController.resultLabel)
     }
     
     private func requestResult(calculatorStatement: String, completion: ((String) -> Void)?) {

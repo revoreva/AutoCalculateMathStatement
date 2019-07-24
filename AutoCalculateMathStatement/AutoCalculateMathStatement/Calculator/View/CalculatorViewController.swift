@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import Bond
 
-class CalculatorViewController: UIViewController, CalculatorViewModelProtocol {
+class CalculatorViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
-    var viewModel: CalculatorViewModel = CalculatorViewModel()
+    var viewModel: CalculatorViewModel!
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = CalculatorViewModel(viewController: self)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.delegate = self
         viewModel.onViewDidLoad()
     }
 }

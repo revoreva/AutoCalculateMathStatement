@@ -90,7 +90,6 @@
 		9464F37322DDC1CD00D078E4 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				9464F37422DDC1DE00D078E4 /* Controller */,
 				9464F37722DDC23400D078E4 /* Model */,
 				94EF7BA922E07F7100FA8091 /* Service */,
 				9464F37522DDC1EA00D078E4 /* View */,
@@ -100,17 +99,10 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		9464F37422DDC1DE00D078E4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		9464F37522DDC1EA00D078E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */,
 				94EF7B9F22E0635A00FA8091 /* CalculatorViewController.xib */,
 			);
 			path = View;
