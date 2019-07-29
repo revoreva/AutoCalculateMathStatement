@@ -11,6 +11,8 @@ Sample project of iOS
 - One Way Binding: ViewModel observe View
 ![](mode_binding.png)
 5. Next project: Two Way Binding's sample
+6. Contain Unit Tests
+![](UnitTestSchemes.png)
 
 Demo:
 
@@ -19,6 +21,7 @@ Demo:
 Main structures:
 
 ![](structures.png)
+![](UnitTestStructures.png)
 
 ---
 Special thanks to [@ivanrein](https://github.com/ivanrein) and [@romin991](https://github.com/romin991)
