@@ -29,4 +29,8 @@ class CalculatorViewController: UIViewController {
         
         viewModel.setupBinding()
     }
+    
+    @IBAction func onTapButtonPresentResult(_ sender: Any) {
+        present(viewModel.generateAlert(), animated: true)
+    }
 }

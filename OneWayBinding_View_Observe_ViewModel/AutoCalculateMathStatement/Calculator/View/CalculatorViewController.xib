@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="MVVMBondSample" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="AutoCalculateMathStatement" customModuleProvider="target">
             <connections>
                 <outlet property="resultLabel" destination="9du-cM-7Mr" id="nhb-oh-ZSp"/>
                 <outlet property="textField" destination="wYl-AW-KTv" id="30h-fp-Qbk"/>
@@ -49,6 +49,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2U-NA-GR1">
+                    <rect key="frame" x="157" y="286" width="100" height="30"/>
+                    <state key="normal" title="Present Result"/>
+                    <connections>
+                        <action selector="onTapButtonPresentResult:" destination="-1" eventType="touchUpInside" id="MQ9-Ua-kD6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -56,11 +63,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9du-cM-7Mr" secondAttribute="trailing" id="Dd8-4q-sMw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wYl-AW-KTv" secondAttribute="trailing" id="Een-De-X41"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FUO-gF-z1Z"/>
+                <constraint firstItem="O2U-NA-GR1" firstAttribute="top" secondItem="9du-cM-7Mr" secondAttribute="bottom" constant="41" id="Pui-lx-9aV"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UYD-9h-k7z"/>
                 <constraint firstItem="9du-cM-7Mr" firstAttribute="top" secondItem="0um-Kn-bDQ" secondAttribute="bottom" id="ZIx-gm-hkw"/>
                 <constraint firstItem="wYl-AW-KTv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="amJ-iM-HIG"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="top" secondItem="wYl-AW-KTv" secondAttribute="bottom" id="h1l-xY-GIQ"/>
                 <constraint firstItem="9du-cM-7Mr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i05-vA-05p"/>
+                <constraint firstItem="O2U-NA-GR1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kYh-jY-KQM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="37.681159420289859" y="35.491071428571423"/>

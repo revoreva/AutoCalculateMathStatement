@@ -30,6 +30,10 @@ class CalculatorViewController: UIViewController {
         setupBinding()
     }
     
+    @IBAction func onTapButtonPresentResult(_ sender: Any) {
+        present(viewModel.generateAlert(), animated: true)
+    }
+    
     private func setupBinding() {
         textField.reactive.text.bind(to: viewModel.statement)
         viewModel.result.bind(to: resultLabel)
