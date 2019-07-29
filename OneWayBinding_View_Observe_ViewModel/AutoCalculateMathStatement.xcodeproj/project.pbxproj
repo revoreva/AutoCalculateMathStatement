@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9013745ABCE0E395BA70FE79 /* libPods-AutoCalculateMathStatementTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 690DC9FE01BC3B2A8EA9EFAA /* libPods-AutoCalculateMathStatementTests.a */; };
+		943EC74E22EED75F001E7E66 /* AutoCalculateMathStatementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC74D22EED75F001E7E66 /* AutoCalculateMathStatementTests.swift */; };
+		943EC75722EED7A6001E7E66 /* CalculatorViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC75622EED7A6001E7E66 /* CalculatorViewModelTest.swift */; };
 		9464F36122DDA28B00D078E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464F36022DDA28B00D078E4 /* AppDelegate.swift */; };
 		9464F36822DDA28E00D078E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9464F36722DDA28E00D078E4 /* Assets.xcassets */; };
 		9464F36B22DDA28E00D078E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */; };
@@ -22,7 +25,23 @@
 		B06582C3AB26B2EE8316D808 /* Pods_AutoCalculateMathStatement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00DEB74E7F937958F22B43A /* Pods_AutoCalculateMathStatement.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		943EC75022EED75F001E7E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9464F35522DDA28B00D078E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9464F35C22DDA28B00D078E4;
+			remoteInfo = AutoCalculateMathStatement;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		525D24D957ADBE31732E14C2 /* Pods-AutoCalculateMathStatementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCalculateMathStatementTests.debug.xcconfig"; path = "Target Support Files/Pods-AutoCalculateMathStatementTests/Pods-AutoCalculateMathStatementTests.debug.xcconfig"; sourceTree = "<group>"; };
+		690DC9FE01BC3B2A8EA9EFAA /* libPods-AutoCalculateMathStatementTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCalculateMathStatementTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		943EC74B22EED75F001E7E66 /* AutoCalculateMathStatementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoCalculateMathStatementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		943EC74D22EED75F001E7E66 /* AutoCalculateMathStatementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCalculateMathStatementTests.swift; sourceTree = "<group>"; };
+		943EC74F22EED75F001E7E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943EC75622EED7A6001E7E66 /* CalculatorViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelTest.swift; sourceTree = "<group>"; };
 		9464F35D22DDA28B00D078E4 /* AutoCalculateMathStatement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCalculateMathStatement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9464F36022DDA28B00D078E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9464F36722DDA28E00D078E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,12 +56,21 @@
 		94EF7BB222E0F06200FA8091 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		94EF7BB422E0F5A200FA8091 /* CalculatorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorWireframe.swift; sourceTree = "<group>"; };
 		94EF7BB722E0F93B00FA8091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1CB7ED59598365D66174EE6 /* Pods-AutoCalculateMathStatementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCalculateMathStatementTests.release.xcconfig"; path = "Target Support Files/Pods-AutoCalculateMathStatementTests/Pods-AutoCalculateMathStatementTests.release.xcconfig"; sourceTree = "<group>"; };
 		D00DEB74E7F937958F22B43A /* Pods_AutoCalculateMathStatement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCalculateMathStatement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC289530B66F8D9D3B8FD0F4 /* Pods-AutoCalculateMathStatement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCalculateMathStatement.release.xcconfig"; path = "Target Support Files/Pods-AutoCalculateMathStatement/Pods-AutoCalculateMathStatement.release.xcconfig"; sourceTree = "<group>"; };
 		F666CF77D6C3CBEDAEB037A8 /* Pods-AutoCalculateMathStatement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCalculateMathStatement.debug.xcconfig"; path = "Target Support Files/Pods-AutoCalculateMathStatement/Pods-AutoCalculateMathStatement.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		943EC74822EED75F001E7E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9013745ABCE0E395BA70FE79 /* libPods-AutoCalculateMathStatementTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9464F35A22DDA28B00D078E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +82,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943EC74C22EED75F001E7E66 /* AutoCalculateMathStatementTests */ = {
+			isa = PBXGroup;
+			children = (
+				943EC75522EED797001E7E66 /* Calculator */,
+				943EC74D22EED75F001E7E66 /* AutoCalculateMathStatementTests.swift */,
+				943EC74F22EED75F001E7E66 /* Info.plist */,
+			);
+			path = AutoCalculateMathStatementTests;
+			sourceTree = "<group>";
+		};
+		943EC75522EED797001E7E66 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				943EC75622EED7A6001E7E66 /* CalculatorViewModelTest.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 		9464F35422DDA28B00D078E4 = {
 			isa = PBXGroup;
 			children = (
 				9464F35F22DDA28B00D078E4 /* AutoCalculateMathStatement */,
+				943EC74C22EED75F001E7E66 /* AutoCalculateMathStatementTests */,
 				9464F35E22DDA28B00D078E4 /* Products */,
 				BB335ECDE5E45CFC1DED035B /* Pods */,
 				A389AE4B4C9BF21355B3C959 /* Frameworks */,
@@ -68,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9464F35D22DDA28B00D078E4 /* AutoCalculateMathStatement.app */,
+				943EC74B22EED75F001E7E66 /* AutoCalculateMathStatementTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D00DEB74E7F937958F22B43A /* Pods_AutoCalculateMathStatement.framework */,
+				690DC9FE01BC3B2A8EA9EFAA /* libPods-AutoCalculateMathStatementTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,6 +210,8 @@
 			children = (
 				F666CF77D6C3CBEDAEB037A8 /* Pods-AutoCalculateMathStatement.debug.xcconfig */,
 				DC289530B66F8D9D3B8FD0F4 /* Pods-AutoCalculateMathStatement.release.xcconfig */,
+				525D24D957ADBE31732E14C2 /* Pods-AutoCalculateMathStatementTests.debug.xcconfig */,
+				B1CB7ED59598365D66174EE6 /* Pods-AutoCalculateMathStatementTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,6 +219,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		943EC74A22EED75F001E7E66 /* AutoCalculateMathStatementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 943EC75422EED75F001E7E66 /* Build configuration list for PBXNativeTarget "AutoCalculateMathStatementTests" */;
+			buildPhases = (
+				D1304942434FF3E74767E27D /* [CP] Check Pods Manifest.lock */,
+				943EC74722EED75F001E7E66 /* Sources */,
+				943EC74822EED75F001E7E66 /* Frameworks */,
+				943EC74922EED75F001E7E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				943EC75122EED75F001E7E66 /* PBXTargetDependency */,
+			);
+			name = AutoCalculateMathStatementTests;
+			productName = AutoCalculateMathStatementTests;
+			productReference = 943EC74B22EED75F001E7E66 /* AutoCalculateMathStatementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9464F35C22DDA28B00D078E4 /* AutoCalculateMathStatement */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9464F36F22DDA28E00D078E4 /* Build configuration list for PBXNativeTarget "AutoCalculateMathStatement" */;
@@ -197,6 +267,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = reva;
 				TargetAttributes = {
+					943EC74A22EED75F001E7E66 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 9464F35C22DDA28B00D078E4;
+					};
 					9464F35C22DDA28B00D078E4 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -216,11 +290,19 @@
 			projectRoot = "";
 			targets = (
 				9464F35C22DDA28B00D078E4 /* AutoCalculateMathStatement */,
+				943EC74A22EED75F001E7E66 /* AutoCalculateMathStatementTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		943EC74922EED75F001E7E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9464F35B22DDA28B00D078E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +345,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoCalculateMathStatement/Pods-AutoCalculateMathStatement-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1304942434FF3E74767E27D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoCalculateMathStatementTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F72FD83385E94766B12EFF30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +392,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		943EC74722EED75F001E7E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943EC74E22EED75F001E7E66 /* AutoCalculateMathStatementTests.swift in Sources */,
+				943EC75722EED7A6001E7E66 /* CalculatorViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9464F35922DDA28B00D078E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +417,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		943EC75122EED75F001E7E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9464F35C22DDA28B00D078E4 /* AutoCalculateMathStatement */;
+			targetProxy = 943EC75022EED75F001E7E66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */ = {
@@ -325,6 +446,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		943EC75222EED75F001E7E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 525D24D957ADBE31732E14C2 /* Pods-AutoCalculateMathStatementTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMD9X7E44J;
+				INFOPLIST_FILE = AutoCalculateMathStatementTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reva.AutoCalculateMathStatementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoCalculateMathStatement.app/AutoCalculateMathStatement";
+			};
+			name = Debug;
+		};
+		943EC75322EED75F001E7E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1CB7ED59598365D66174EE6 /* Pods-AutoCalculateMathStatementTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMD9X7E44J;
+				INFOPLIST_FILE = AutoCalculateMathStatementTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = reva.AutoCalculateMathStatementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoCalculateMathStatement.app/AutoCalculateMathStatement";
+			};
+			name = Release;
+		};
 		9464F36D22DDA28E00D078E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,6 +651,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		943EC75422EED75F001E7E66 /* Build configuration list for PBXNativeTarget "AutoCalculateMathStatementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943EC75222EED75F001E7E66 /* Debug */,
+				943EC75322EED75F001E7E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9464F35822DDA28B00D078E4 /* Build configuration list for PBXProject "AutoCalculateMathStatement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
