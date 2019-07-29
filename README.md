@@ -21,7 +21,7 @@ Demo:
 Main structures:
 
 ![](structures.png)
-![](UnitTestStructures.png)
+![](UnitTestStructureFiles.png)
 
 ---
 Special thanks to [@ivanrein](https://github.com/ivanrein) and [@romin991](https://github.com/romin991)
