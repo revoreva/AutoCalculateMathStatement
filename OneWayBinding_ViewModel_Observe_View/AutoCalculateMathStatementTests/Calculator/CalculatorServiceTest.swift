@@ -1,5 +1,5 @@
 //
-//  CalculatorViewModelTest.swift
+//  CalculatorServiceTest.swift
 //  AutoCalculateMathStatementTests
 //
 //  Created by Reva Yoga Pradana on 26/07/19.
@@ -13,9 +13,9 @@ import OHHTTPStubs
 
 @testable import AutoCalculateMathStatement
 
-class CalculatorViewModelTest: QuickSpec {
+class CalculatorServiceTest: QuickSpec {
     override func spec() {
-        describe("testing API Math.js") {
+        describe("testing CalculatorService.getResult(...)") {
             afterEach {
                 OHHTTPStubs.removeAllStubs()
             }
