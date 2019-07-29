@@ -11,8 +11,10 @@ Sample project of iOS
 - One Way Binding: ViewModel observe View
 ![](mode_binding.png)
 5. Next project: Two Way Binding's sample
-6. Contain Unit Tests
-![](UnitTestSchemes.png)
+6. Contain Unit Tests:
+- Using Quick-Nimble (https://github.com/Quick/Nimble)
+- Using OHTTPStubs (https://github.com/AliSoftware/OHHTTPStubs)
+- Unit Test showcase ![](UnitTestSchemes.png)
 
 Demo:
 
