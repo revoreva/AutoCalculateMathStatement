@@ -21,6 +21,8 @@ class CalculatorViewModel {
     func setupBinding() {
         guard let viewController = viewController else { return }
         
+        result.bind(to: viewController.resultLabel)
+        
         _ = viewController.textField.reactive.text.observeNext { [weak self] newText in
             guard let newText = newText else { return }
             
@@ -28,8 +30,6 @@ class CalculatorViewModel {
                 self?.result.value = result
             }
         }
-        
-        result.bind(to: viewController.resultLabel)
     }
     
     func generateAlert() -> UIAlertController {

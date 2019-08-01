@@ -12,6 +12,7 @@
 		9464F36122DDA28B00D078E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464F36022DDA28B00D078E4 /* AppDelegate.swift */; };
 		9464F36822DDA28E00D078E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9464F36722DDA28E00D078E4 /* Assets.xcassets */; };
 		9464F36B22DDA28E00D078E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */; };
+		94E6B0DF22F294EE005B19F8 /* CalculatorViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6B0DE22F294EE005B19F8 /* CalculatorViewModelTest.swift */; };
 		94EF7BA022E0635A00FA8091 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EF7B9F22E0635A00FA8091 /* CalculatorViewController.xib */; };
 		94EF7BA222E0642900FA8091 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */; };
 		94EF7BA622E072F100FA8091 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF7BA522E072F100FA8091 /* CalculatorViewModel.swift */; };
@@ -48,6 +49,7 @@
 		9464F36722DDA28E00D078E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9464F36A22DDA28E00D078E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9464F36C22DDA28E00D078E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E6B0DE22F294EE005B19F8 /* CalculatorViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelTest.swift; sourceTree = "<group>"; };
 		94EF7B9F22E0635A00FA8091 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		94EF7BA522E072F100FA8091 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				943EC74022EABC54001E7E66 /* CalculatorServiceTest.swift */,
+				94E6B0DE22F294EE005B19F8 /* CalculatorViewModelTest.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -327,9 +330,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AutoCalculateMathStatement/Pods-AutoCalculateMathStatement-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
-				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond-framework/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ-framework/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit-framework/ReactiveKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E6B0DF22F294EE005B19F8 /* CalculatorViewModelTest.swift in Sources */,
 				943EC74122EABC54001E7E66 /* CalculatorServiceTest.swift in Sources */,
 				943EC73822EABB7B001E7E66 /* AutoCalculateMathStatementTests.swift in Sources */,
 			);
