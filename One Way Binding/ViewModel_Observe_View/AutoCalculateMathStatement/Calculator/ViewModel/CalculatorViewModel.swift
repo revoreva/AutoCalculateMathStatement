@@ -12,18 +12,14 @@ import Bond
 class CalculatorViewModel {
     var result: Observable<String> = Observable<String>("")
     
-    weak var viewController: CalculatorViewController?
-    
-    init(viewController: CalculatorViewController?) {
-        self.viewController = viewController
-    }
+    weak var delegate: CalculatorViewController?
     
     func setupBinding() {
-        guard let viewController = viewController else { return }
+        guard let delegate = delegate else { return }
         
-        result.bind(to: viewController.resultLabel)
+        result.bind(to: delegate.resultLabel)
         
-        _ = viewController.textField.reactive.text.observeNext { [weak self] newText in
+        _ = delegate.textField.reactive.text.observeNext { [weak self] newText in
             guard let newText = newText else { return }
             
             self?.requestResult(calculatorStatement: newText) { [weak self] result in

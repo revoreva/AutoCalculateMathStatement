@@ -13,11 +13,13 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
-    var viewModel: CalculatorViewModel!
+    var viewModel: CalculatorViewModel = CalculatorViewModel()
+    var wireframe: CalculatorWireframe = CalculatorWireframe()
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.viewModel = CalculatorViewModel(viewController: self)
+        viewModel.delegate = self
+        wireframe.presentedViewController = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,9 +30,17 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.setupBinding()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(backAction))
+    }
+    
+    @objc func backAction() {
+        wireframe.back(isAnimated: true)
     }
     
     @IBAction func onTapButtonPresentResult(_ sender: Any) {
-        present(viewModel.generateAlert(), animated: true)
+        wireframe.presentAlert(viewModel: viewModel)
     }
 }

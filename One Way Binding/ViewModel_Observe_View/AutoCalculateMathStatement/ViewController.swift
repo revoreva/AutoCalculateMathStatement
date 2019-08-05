@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTapButton(_ sender: Any) {
-        let wireframe = CalculatorWireframe()
-        
-        wireframe.show(from: self)
+        CalculatorWireframe().show(from: self)
     }
     
 }
