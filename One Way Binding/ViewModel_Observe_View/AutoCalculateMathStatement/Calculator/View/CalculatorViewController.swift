@@ -29,7 +29,13 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         viewModel.setupBinding()
+    }
+}
+
+private extension CalculatorViewController {
+    func setupView() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
                                                            style: .plain,
                                                            target: self,
