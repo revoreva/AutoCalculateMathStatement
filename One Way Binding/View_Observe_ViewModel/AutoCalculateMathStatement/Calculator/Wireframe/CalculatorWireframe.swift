@@ -21,8 +21,8 @@ class CalculatorWireframe {
         presentedViewController?.navigationController?.popViewController(animated: isAnimated)
     }
     
-    func presentAlert(isAnimated: Bool = true, viewModel: CalculatorViewModel, completion: (() -> Void)? = nil) {
-        presentedViewController?.present(viewModel.generateAlert(), animated: isAnimated, completion: completion)
+    func presentAlert(isAnimated: Bool = true, alertController: UIAlertController, completion: (() -> Void)? = nil) {
+        presentedViewController?.present(alertController, animated: isAnimated, completion: completion)
     }
 }
 

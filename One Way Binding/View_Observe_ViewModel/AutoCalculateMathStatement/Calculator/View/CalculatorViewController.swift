@@ -51,6 +51,6 @@ private extension CalculatorViewController {
     }
     
     @IBAction func onTapButtonPresentResult(_ sender: Any) {
-        wireframe.presentAlert(viewModel: viewModel)
+        wireframe.presentAlert(alertController: viewModel.generateAlert())
     }
 }
