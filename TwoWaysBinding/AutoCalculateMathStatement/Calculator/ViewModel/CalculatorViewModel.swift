@@ -17,17 +17,6 @@ class CalculatorViewModel {
         setupAction()
     }
     
-    private func setupAction() {
-        _ = statement.observeNext { [weak self] newText in
-            
-            guard let newText = newText else { return }
-            
-            self?.requestResult(calculatorStatement: newText) { [weak self] result in
-                self?.result.value = result
-            }
-        }
-    }
-    
     func generateAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Result", message: result.value, preferredStyle: .alert)
         alert.addAction(
@@ -40,8 +29,22 @@ class CalculatorViewModel {
         
         return alert
     }
+}
+
+// MARK: - Private Implementation
+private extension CalculatorViewModel {
+    func setupAction() {
+        _ = statement.observeNext { [weak self] newText in
+            
+            guard let newText = newText else { return }
+            
+            self?.requestResult(calculatorStatement: newText) { [weak self] result in
+                self?.result.value = result
+            }
+        }
+    }
     
-    private func requestResult(calculatorStatement: String, completion: ((String) -> Void)?) {
+    func requestResult(calculatorStatement: String, completion: ((String) -> Void)?) {
         CalculatorService.getResult(expression: calculatorStatement) { error, model in
             guard error == nil, model.isResultValid, let result = model.result else {
                 completion?("")
