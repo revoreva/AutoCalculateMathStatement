@@ -8,7 +8,7 @@ Sample project of iOS
 
 ![](structures.png)
 
-2. Using Bond (https://github.com/DeclarativeHub/Bond)
+2. Using `Bond` (https://github.com/DeclarativeHub/Bond)
 
 3. Supported by API of MathJS (https://api.mathjs.org)
 
@@ -16,8 +16,8 @@ Sample project of iOS
 ![](TwoWaysBindingInView.png)
 
 5. Contain Unit Tests:
-- Using Quick-Nimble (https://github.com/Quick/Nimble)
-- Using OHTTPStubs (https://github.com/AliSoftware/OHHTTPStubs)
+- Using `Quick-Nimble` (https://github.com/Quick/Nimble)
+- Using `OHTTPStubs` (https://github.com/AliSoftware/OHHTTPStubs)
 - Unit Test showcase 
 
 ![](UnitTestSchemes.png)
