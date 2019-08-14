@@ -12,8 +12,8 @@ Sample project of iOS
 
 3. Supported by API of MathJS (https://api.mathjs.org)
 
-4. Current project is Two Way Binding, binding placed in View:
-![](TwoWaysBindingInView.png)
+4. Current project is using Two Way Binding, binding placed in View:
+![](Binding.png)
 
 5. Contain Unit Tests:
 - Using `Quick-Nimble` (https://github.com/Quick/Nimble)
@@ -32,4 +32,3 @@ Sample project of iOS
 Special thanks to [@ivanrein](https://github.com/ivanrein) and [@romin991](https://github.com/romin991)
 
 ---
-Next project: One Way Binding's sample
