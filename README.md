@@ -12,14 +12,8 @@ Sample project of iOS
 
 3. Supported by API of MathJS (https://api.mathjs.org)
 
-4. Currently there are 2 mode of Two Way Binding:
-
-![](TwoWaysBinding.png)
-
-- Binding placed on View
-- Binding placed on ViewModel
-
-![](TwoWaysBinding_Folders.png)
+4. Current project is Two Way Binding, binding placed in View:
+![](TwoWaysBindingInView.png)
 
 5. Contain Unit Tests:
 - Using Quick-Nimble (https://github.com/Quick/Nimble)
