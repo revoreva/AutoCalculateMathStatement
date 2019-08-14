@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onTapButton(_ sender: Any) {
+    @IBAction func onTapButtonCalculator(_ sender: Any) {
         CalculatorWireframe().show(from: self)
     }
 }
