@@ -12,14 +12,14 @@ Sample project of iOS
 
 3. Supported by API of MathJS (https://api.mathjs.org)
 
-4. Currently there are 2 mode of One Way Binding:
+4. Currently there are 2 mode of Two Way Binding:
 
-![](OneWayBinding.png)
+![](TwoWaysBinding.png)
 
-- View observe ViewModel
-- ViewModel observe View
+- Binding placed on View
+- Binding placed on ViewModel
 
-![](OneWayBinding_Folders.png)
+![](TwoWaysBinding_Folders.png)
 
 5. Contain Unit Tests:
 - Using Quick-Nimble (https://github.com/Quick/Nimble)
@@ -38,4 +38,4 @@ Sample project of iOS
 Special thanks to [@ivanrein](https://github.com/ivanrein) and [@romin991](https://github.com/romin991)
 
 ---
-Next project: Two Way Binding's sample
+Next project: One Way Binding's sample
