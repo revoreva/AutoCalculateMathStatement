@@ -33,6 +33,7 @@ class CalculatorViewController: UIViewController {
     }
 }
 
+// MARK: - Private Implementation
 private extension CalculatorViewController {
     func setupBinding() {
         textField.reactive.text.bind(to: viewModel.statement)
