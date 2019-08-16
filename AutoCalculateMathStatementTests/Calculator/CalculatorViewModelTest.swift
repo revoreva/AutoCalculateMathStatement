@@ -24,10 +24,10 @@ class CalculatorViewModelTest: QuickSpec {
             it("should have correct value for result regarding the statements") {
                 let viewModel = CalculatorViewModel()
                 
-                viewModel.statement.value = "2*9+9"
+                viewModel.requestResult(calculatorStatement: "2*9+9")
                 
-                expect(viewModel.result.value).toEventuallyNot(beNil(), timeout: 10, pollInterval: 0.2)
-                expect(viewModel.result.value).toEventually(equal("27"), timeout: 10, pollInterval: 0.2)
+                expect(viewModel.model.result.value).toEventuallyNot(beNil(), timeout: 10, pollInterval: 0.2)
+                expect(viewModel.model.result.value).toEventually(equal("27"), timeout: 10, pollInterval: 0.2)
             }
         }
     }
