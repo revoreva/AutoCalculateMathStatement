@@ -10,5 +10,6 @@ import Foundation
 import Bond
 
 struct CalculatorModel {
+    var statement: Observable<String?> = Observable<String?>("")
     var result: Observable<String> = Observable<String>("")
 }

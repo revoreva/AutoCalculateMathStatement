@@ -12,6 +12,12 @@ import Bond
 class CalculatorViewModel {
     var model: CalculatorModel = CalculatorModel()
     
+    init() {
+        _ = model.statement.observeNext { [weak self] newText in
+            self?.requestResult(calculatorStatement: newText)
+        }
+    }
+    
     func generateAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Result", message: model.result.value, preferredStyle: .alert)
         alert.addAction(
@@ -24,7 +30,10 @@ class CalculatorViewModel {
         
         return alert
     }
-    
+}
+
+// MARK: - Private Implementation
+extension CalculatorViewModel {
     func requestResult(calculatorStatement: String?) {
         guard let calculatorStatement = calculatorStatement else { return }
         

@@ -36,9 +36,7 @@ class CalculatorViewController: UIViewController {
 // MARK: - Private Implementation
 private extension CalculatorViewController {
     func setupBinding() {
-        _ = textField.reactive.text.observeNext { [weak self] text in
-            self?.viewModel.requestResult(calculatorStatement: text)
-        }
+        textField.reactive.text.bind(to: viewModel.model.statement)
         viewModel.model.result.bind(to: resultLabel)
     }
     
