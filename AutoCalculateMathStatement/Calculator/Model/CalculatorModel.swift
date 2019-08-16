@@ -1,19 +1,14 @@
 //
 //  CalculatorModel.swift
-//  MVVMBondSample
+//  AutoCalculateMathStatement
 //
-//  Created by Reva Yoga Pradana on 19/07/19.
+//  Created by Reva Yoga Pradana on 16/08/19.
 //  Copyright © 2019 reva. All rights reserved.
 //
 
 import Foundation
+import Bond
 
 struct CalculatorModel {
-    var result: String?
-    
-    var isResultValid: Bool {
-        guard let result = result else { return false }
-        
-        return Double(result) != nil
-    }
+    var result: Observable<String> = Observable<String>("")
 }

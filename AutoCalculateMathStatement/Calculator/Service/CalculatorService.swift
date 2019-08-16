@@ -12,7 +12,7 @@ import Alamofire
 class CalculatorService {
     private typealias JSON = [String: Any]
     
-    static func getResult(expression: String, completion: ((Error?, CalculatorModel) -> Void)?) {
+    static func getResult(expression: String, completion: ((Error?, CalculatorObject) -> Void)?) {
         let params: Parameters = [
             "expr": expression
         ]
@@ -24,7 +24,7 @@ class CalculatorService {
             encoding: URLEncoding(destination: .queryString),
             headers: nil
         ).responseString { response in //API return String format
-            completion?(response.error, CalculatorModel(result: response.result.value))
+            completion?(response.error, CalculatorObject(result: response.result.value))
         }
     }
 }

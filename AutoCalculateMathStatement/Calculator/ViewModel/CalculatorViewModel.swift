@@ -10,15 +10,10 @@ import UIKit
 import Bond
 
 class CalculatorViewModel {
-    var statement: Observable<String?> = Observable<String?>("")
-    var result: Observable<String> = Observable<String>("")
-    
-    init() {
-        setupAction()
-    }
+    var model: CalculatorModel = CalculatorModel()
     
     func generateAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Result", message: result.value, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Result", message: model.result.value, preferredStyle: .alert)
         alert.addAction(
             UIAlertAction(
                 title: NSLocalizedString("OK", comment: "Default action"),
@@ -29,29 +24,17 @@ class CalculatorViewModel {
         
         return alert
     }
-}
-
-// MARK: - Private Implementation
-private extension CalculatorViewModel {
-    func setupAction() {
-        _ = statement.observeNext { [weak self] newText in
-            
-            guard let newText = newText else { return }
-            
-            self?.requestResult(calculatorStatement: newText) { [weak self] result in
-                self?.result.value = result
-            }
-        }
-    }
     
-    func requestResult(calculatorStatement: String, completion: ((String) -> Void)?) {
-        CalculatorService.getResult(expression: calculatorStatement) { error, model in
+    func requestResult(calculatorStatement: String?) {
+        guard let calculatorStatement = calculatorStatement else { return }
+        
+        CalculatorService.getResult(expression: calculatorStatement) { [weak self] error, model in
             guard error == nil, model.isResultValid, let result = model.result else {
-                completion?("")
+                self?.model.result.value = ""
                 return
             }
             
-            completion?(result)
+            self?.model.result.value = result
         }
     }
 }
