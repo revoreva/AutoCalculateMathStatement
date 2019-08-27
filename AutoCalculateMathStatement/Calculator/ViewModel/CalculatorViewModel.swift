@@ -33,6 +33,7 @@ class CalculatorViewModel {
     
     func reset() {
         model.statement.value = ""
+        model.result.value = ""
     }
 }
 
