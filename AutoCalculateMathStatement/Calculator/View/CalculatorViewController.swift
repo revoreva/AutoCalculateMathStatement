@@ -36,7 +36,7 @@ class CalculatorViewController: UIViewController {
 // MARK: - Private Implementation
 private extension CalculatorViewController {
     func setupBinding() {
-        textField.reactive.text.bind(to: viewModel.model.statement)
+        textField.reactive.text.bidirectionalBind(to: viewModel.model.statement)
         viewModel.model.result.bind(to: resultLabel)
     }
     
@@ -53,5 +53,9 @@ private extension CalculatorViewController {
     
     @IBAction func onTapButtonPresentResult(_ sender: Any) {
         wireframe.presentAlert(alertController: viewModel.generateAlert())
+    }
+    
+    @IBAction func onTapClearButton(_ sender: Any) {
+        viewModel.reset()
     }
 }

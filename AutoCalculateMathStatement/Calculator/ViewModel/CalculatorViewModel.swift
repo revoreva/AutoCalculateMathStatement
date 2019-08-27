@@ -30,6 +30,10 @@ class CalculatorViewModel {
         
         return alert
     }
+    
+    func reset() {
+        model.statement.value = ""
+    }
 }
 
 // MARK: - Private Implementation
