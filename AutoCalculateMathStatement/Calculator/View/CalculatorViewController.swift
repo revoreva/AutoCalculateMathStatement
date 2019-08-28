@@ -31,15 +31,23 @@ class CalculatorViewController: UIViewController {
         setupView()
         setupBinding()
     }
-}
-
-// MARK: - Private Implementation
-private extension CalculatorViewController {
+    
     func setupBinding() {
         textField.reactive.text.bidirectionalBind(to: viewModel.model.statement)
         viewModel.model.result.bind(to: resultLabel)
     }
     
+    @IBAction func onTapButtonPresentResult(_ sender: Any) {
+        wireframe.presentAlert(alertController: viewModel.generateAlert())
+    }
+    
+    @IBAction func onTapClearButton(_ sender: Any) {
+        viewModel.reset()
+    }
+}
+
+// MARK: - Private Implementation
+private extension CalculatorViewController {
     func setupView() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
                                                            style: .plain,
@@ -49,13 +57,5 @@ private extension CalculatorViewController {
     
     @objc func backAction() {
         wireframe.back(isAnimated: true)
-    }
-    
-    @IBAction func onTapButtonPresentResult(_ sender: Any) {
-        wireframe.presentAlert(alertController: viewModel.generateAlert())
-    }
-    
-    @IBAction func onTapClearButton(_ sender: Any) {
-        viewModel.reset()
     }
 }
