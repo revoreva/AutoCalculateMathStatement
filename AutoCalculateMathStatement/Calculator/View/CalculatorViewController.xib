@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="AutoCalculateMathStatement" customModuleProvider="target">
             <connections>
+                <outlet property="loadingLabel" destination="OE6-Jo-oak" id="kyS-tY-xeM"/>
                 <outlet property="resultLabel" destination="9du-cM-7Mr" id="nhb-oh-ZSp"/>
                 <outlet property="textField" destination="wYl-AW-KTv" id="30h-fp-Qbk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="pK1-Jg-42W"/>
@@ -49,15 +50,9 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2U-NA-GR1">
-                    <rect key="frame" x="157" y="286" width="100" height="30"/>
-                    <state key="normal" title="Present Result"/>
-                    <connections>
-                        <action selector="onTapButtonPresentResult:" destination="-1" eventType="touchUpInside" id="MQ9-Ua-kD6"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-zb-A0h">
-                    <rect key="frame" x="183.5" y="367" width="47" height="30"/>
+                    <rect key="frame" x="161" y="367" width="92" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="CLEAR">
                         <color key="titleColor" red="1" green="0.42066870714623339" blue="0.24624396509551183" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
@@ -65,6 +60,12 @@
                         <action selector="onTapClearButton:" destination="-1" eventType="touchUpInside" id="Kol-Ft-pdd"/>
                     </connections>
                 </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE6-Jo-oak">
+                    <rect key="frame" x="319" y="268" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -73,14 +74,14 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wYl-AW-KTv" secondAttribute="trailing" id="Een-De-X41"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FUO-gF-z1Z"/>
                 <constraint firstItem="9QS-zb-A0h" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FoD-wA-UOA"/>
-                <constraint firstItem="O2U-NA-GR1" firstAttribute="top" secondItem="9du-cM-7Mr" secondAttribute="bottom" constant="41" id="Pui-lx-9aV"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UYD-9h-k7z"/>
+                <constraint firstAttribute="trailing" secondItem="OE6-Jo-oak" secondAttribute="trailing" constant="20" id="Ywe-T7-jtq"/>
                 <constraint firstItem="9du-cM-7Mr" firstAttribute="top" secondItem="0um-Kn-bDQ" secondAttribute="bottom" id="ZIx-gm-hkw"/>
                 <constraint firstItem="wYl-AW-KTv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="amJ-iM-HIG"/>
-                <constraint firstItem="9QS-zb-A0h" firstAttribute="top" secondItem="O2U-NA-GR1" secondAttribute="bottom" constant="51" id="dKc-wC-tS6"/>
+                <constraint firstItem="9QS-zb-A0h" firstAttribute="top" secondItem="9du-cM-7Mr" secondAttribute="bottom" constant="122" id="eg9-Sm-7H1"/>
                 <constraint firstItem="0um-Kn-bDQ" firstAttribute="top" secondItem="wYl-AW-KTv" secondAttribute="bottom" id="h1l-xY-GIQ"/>
                 <constraint firstItem="9du-cM-7Mr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i05-vA-05p"/>
-                <constraint firstItem="O2U-NA-GR1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kYh-jY-KQM"/>
+                <constraint firstItem="OE6-Jo-oak" firstAttribute="top" secondItem="9du-cM-7Mr" secondAttribute="bottom" constant="23" id="tf3-1c-kWq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="37.681159420289859" y="35.491071428571423"/>

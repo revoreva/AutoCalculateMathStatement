@@ -8,27 +8,17 @@
 
 import UIKit
 import Bond
+import ReactiveKit
 
 class CalculatorViewModel {
     var model: CalculatorModel = CalculatorModel()
+    var showLoading: Subject<Void, Never> = Subject<Void, Never>()
+    var hideLoading: Subject<Void, Never> = Subject<Void, Never>()
     
     init() {
         _ = model.statement.observeNext { [weak self] newText in
             self?.requestResult(calculatorStatement: newText)
         }
-    }
-    
-    func generateAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Result", message: model.result.value, preferredStyle: .alert)
-        alert.addAction(
-            UIAlertAction(
-                title: NSLocalizedString("OK", comment: "Default action"),
-                style: .default,
-                handler: { _ in
-                    NSLog("The \"OK\" alert occured.")
-            }))
-        
-        return alert
     }
     
     func reset() {
@@ -42,7 +32,11 @@ private extension CalculatorViewModel {
     func requestResult(calculatorStatement: String?) {
         guard let calculatorStatement = calculatorStatement else { return }
         
+        showLoading.send()
+        
         CalculatorService.getResult(expression: calculatorStatement) { [weak self] error, model in
+            self?.hideLoading.send()
+            
             guard error == nil, model.isResultValid, let result = model.result else {
                 self?.model.result.value = ""
                 return

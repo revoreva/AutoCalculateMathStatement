@@ -12,6 +12,7 @@ import Bond
 class CalculatorViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     var viewModel: CalculatorViewModel = CalculatorViewModel()
     var wireframe: CalculatorWireframe = CalculatorWireframe()
@@ -35,10 +36,20 @@ class CalculatorViewController: UIViewController {
     func setupBinding() {
         textField.reactive.text.bidirectionalBind(to: viewModel.model.statement)
         viewModel.model.result.bind(to: resultLabel)
+        viewModel.showLoading.bind(to: self) { vc, _ in
+            vc.showLoading()
+        }
+        viewModel.hideLoading.bind(to: self) { vc, _ in
+            vc.hideLoading()
+        }
     }
     
-    @IBAction func onTapButtonPresentResult(_ sender: Any) {
-        wireframe.presentAlert(alertController: viewModel.generateAlert())
+    func showLoading() {
+        loadingLabel.isHidden = false
+    }
+    
+    func hideLoading() {
+        loadingLabel.isHidden = true
     }
     
     @IBAction func onTapClearButton(_ sender: Any) {
@@ -53,6 +64,7 @@ private extension CalculatorViewController {
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(backAction))
+        loadingLabel.isHidden = true
     }
     
     @objc func backAction() {
