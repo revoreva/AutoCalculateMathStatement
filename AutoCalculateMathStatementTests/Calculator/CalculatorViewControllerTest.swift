@@ -35,8 +35,12 @@ class CalculatorViewControllerTest: QuickSpec {
                     
                     viewController.textField.insertText("2*20+2")
                     expect(viewController.viewModel.model.statement.value).toEventually(equal("2*20+2"))
-                    expect(viewController.viewModel.model.result.value).toEventually(equal("42"))
-                    expect(viewController.resultLabel.text).toEventually(equal("42"))
+                    expect(viewController.viewModel.model.result.value).toEventually(equal("42"),
+                                                                                     timeout: TestHelper.defaultTimeout,
+                                                                                     pollInterval: TestHelper.defaultPollInterval)
+                    expect(viewController.resultLabel.text).toEventually(equal("42"),
+                                                                         timeout: TestHelper.defaultTimeout,
+                                                                         pollInterval: TestHelper.defaultPollInterval)
                 }
             }
             
@@ -58,8 +62,12 @@ class CalculatorViewControllerTest: QuickSpec {
                     
                     viewController.textField.insertText("3*10+9-5")
                     expect(viewController.viewModel.model.statement.value).toEventually(equal("3*10+9-5"))
-                    expect(viewController.viewModel.model.result.value).toEventually(equal("34"))
-                    expect(viewController.resultLabel.text).toEventually(equal("34"))
+                    expect(viewController.viewModel.model.result.value).toEventually(equal("34"),
+                                                                                     timeout: TestHelper.defaultTimeout,
+                                                                                     pollInterval: TestHelper.defaultPollInterval)
+                    expect(viewController.resultLabel.text).toEventually(equal("34"),
+                                                                         timeout: TestHelper.defaultTimeout,
+                                                                         pollInterval: TestHelper.defaultPollInterval)
                     
                     viewController.onTapClearButton(0)
                     expect(viewController.viewModel.model.statement.value).toEventually(beEmpty())
@@ -67,6 +75,10 @@ class CalculatorViewControllerTest: QuickSpec {
                     expect(viewController.textField.text).toEventually(beEmpty())
                     expect(viewController.resultLabel.text).toEventually(beEmpty())
                 }
+            }
+            
+            afterEach {
+                OHHTTPStubs.removeAllStubs()
             }
         }
     }

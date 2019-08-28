@@ -33,7 +33,9 @@ class CalculatorViewModelTest: QuickSpec {
                     
                     viewModel.model.statement.value = "2*9+9"
                     expect(viewModel.model.result.value).toEventuallyNot(beNil())
-                    expect(viewModel.model.result.value).toEventually(equal("27"))
+                    expect(viewModel.model.result.value).toEventually(equal("27"),
+                                                                      timeout: TestHelper.defaultTimeout,
+                                                                      pollInterval: TestHelper.defaultPollInterval)
                 }
             }
             
@@ -53,12 +55,18 @@ class CalculatorViewModelTest: QuickSpec {
                     
                     viewModel.model.statement.value = "2*20+5-5"
                     expect(viewModel.model.result.value).toEventuallyNot(beNil())
-                    expect(viewModel.model.result.value).toEventually(equal("40"))
+                    expect(viewModel.model.result.value).toEventually(equal("40"),
+                                                                      timeout: TestHelper.defaultTimeout,
+                                                                      pollInterval: TestHelper.defaultPollInterval)
                     
                     viewModel.reset()
                     expect(viewModel.model.statement.value).toEventually(beEmpty())
                     expect(viewModel.model.result.value).toEventually(beEmpty())
                 }
+            }
+            
+            afterEach {
+                OHHTTPStubs.removeAllStubs()
             }
         }
     }

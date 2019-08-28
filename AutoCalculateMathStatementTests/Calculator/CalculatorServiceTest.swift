@@ -16,10 +16,6 @@ import OHHTTPStubs
 class CalculatorServiceTest: QuickSpec {
     override func spec() {
         describe("testing CalculatorService.getResult(...)") {
-            afterEach {
-                OHHTTPStubs.removeAllStubs()
-            }
-            
             it("model should output correctly", closure: {
                 stub(condition: { (request:URLRequest) -> Bool in
                     return request.url?.absoluteString == Endpoints.mathJSURL
@@ -39,6 +35,8 @@ class CalculatorServiceTest: QuickSpec {
                 
                 expect(resultAPI).toEventuallyNot(beNil(), timeout: 10, pollInterval: 0.2)
                 expect(resultAPI).toEventually(equal("77"), timeout: 10, pollInterval: 0.2)
+                
+                OHHTTPStubs.removeAllStubs()
             })
             
             it("should output correctly on real request", closure: {

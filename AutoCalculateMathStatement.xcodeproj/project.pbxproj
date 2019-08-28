@@ -14,6 +14,7 @@
 		9464F36B22DDA28E00D078E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9464F36922DDA28E00D078E4 /* LaunchScreen.storyboard */; };
 		9466E0E923068B6B00E39977 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466E0E823068B6B00E39977 /* CalculatorModel.swift */; };
 		9475D15823155C0100FF5BBE /* CalculatorViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475D15723155C0100FF5BBE /* CalculatorViewControllerTest.swift */; };
+		9475D15A2316B4D900FF5BBE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475D1592316B4D900FF5BBE /* TestHelper.swift */; };
 		94E6B0DD22F292AA005B19F8 /* CalculatorViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6B0DC22F292AA005B19F8 /* CalculatorViewModelTest.swift */; };
 		94EF7BA022E0635A00FA8091 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EF7B9F22E0635A00FA8091 /* CalculatorViewController.xib */; };
 		94EF7BA222E0642900FA8091 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */; };
@@ -50,6 +51,7 @@
 		9464F36C22DDA28E00D078E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9466E0E823068B6B00E39977 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		9475D15723155C0100FF5BBE /* CalculatorViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewControllerTest.swift; sourceTree = "<group>"; };
+		9475D1592316B4D900FF5BBE /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		94E6B0DC22F292AA005B19F8 /* CalculatorViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModelTest.swift; sourceTree = "<group>"; };
 		94EF7B9F22E0635A00FA8091 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		94EF7BA122E0642900FA8091 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				943EC75522EED797001E7E66 /* Calculator */,
 				943EC74F22EED75F001E7E66 /* Info.plist */,
+				9475D1592316B4D900FF5BBE /* TestHelper.swift */,
 			);
 			path = AutoCalculateMathStatementTests;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				94E6B0DD22F292AA005B19F8 /* CalculatorViewModelTest.swift in Sources */,
 				943EC75722EED7A6001E7E66 /* CalculatorServiceTest.swift in Sources */,
 				9475D15823155C0100FF5BBE /* CalculatorViewControllerTest.swift in Sources */,
+				9475D15A2316B4D900FF5BBE /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
