@@ -38,7 +38,7 @@ class CalculatorViewModel {
 }
 
 // MARK: - Private Implementation
-extension CalculatorViewModel {
+private extension CalculatorViewModel {
     func requestResult(calculatorStatement: String?) {
         guard let calculatorStatement = calculatorStatement else { return }
         
