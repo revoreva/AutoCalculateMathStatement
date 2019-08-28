@@ -37,6 +37,10 @@ a. `result` in ViewModel change `resultLabel` in View:
 
 ![](one-way.png)
 
+4. Example of using signal to trigger loading in `"View"` from `"ViewModel"`
+
+![](signal-reactive.png)
+
 
 ## E. Contain Unit Tests:
 - Using `Quick-Nimble` (https://github.com/Quick/Nimble)
