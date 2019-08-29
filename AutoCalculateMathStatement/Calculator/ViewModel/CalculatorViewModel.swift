@@ -37,7 +37,7 @@ private extension CalculatorViewModel {
         CalculatorService.getResult(expression: calculatorStatement) { [weak self] error, model in
             self?.hideLoading.send()
             
-            guard error == nil, model.isResultValid, let result = model.result else {
+            guard error == nil, let model = model, model.isResultValid, let result = model.result else {
                 self?.model.result.value = ""
                 return
             }

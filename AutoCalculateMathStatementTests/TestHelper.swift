@@ -10,5 +10,5 @@ import Foundation
 
 struct TestHelper {
     static let defaultTimeout: TimeInterval = 3
-    static let defaultPollInterval: TimeInterval = 0.2
+    static let defaultPollInterval: TimeInterval = 0.01
 }

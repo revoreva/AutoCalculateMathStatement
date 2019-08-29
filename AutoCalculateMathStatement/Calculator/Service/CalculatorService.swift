@@ -12,7 +12,12 @@ import Alamofire
 class CalculatorService {
     private typealias JSON = [String: Any]
     
-    static func getResult(expression: String, completion: ((Error?, CalculatorObject) -> Void)?) {
+    static func getResult(expression: String, completion: ((Error?, CalculatorObject?) -> Void)?) {
+        guard !expression.isEmpty else {
+            completion?(NSError(), nil)
+            return
+        }
+        
         let params: Parameters = [
             "expr": expression
         ]
