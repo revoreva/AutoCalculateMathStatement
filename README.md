@@ -76,9 +76,9 @@ viewModel.hideLoading.bind(to: self) { vc, _ in
 - Using `OHTTPStubs` (https://github.com/AliSoftware/OHHTTPStubs)
 - Unit Test showcase 
 
-![](UnitTestSchemes.png)
+![](UnitTestSchemesnew.png)
 
-![](UnitTestStructureFiles.png)
+![](UnitTestStructureFilesnew.png)
 
 ## Demo:
 
